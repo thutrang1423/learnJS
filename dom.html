@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="heading">ID DOM</h1>
+    <h1 class="body">CLASS DOM</h1>
+    <h1 class="body">CLASS DOM</h1>
+    <h1 class="body">CLASS DOM</h1>
+    <div class="box1">
+        <div class="list">
+            <h2 class="cssQuery1">CSS QUERY 1</h2>
+        </div>
+    </div>
+    <div class="box2">
+        <h2 class="cssQueries">CSS QUERY first</h2>
+        <li class="cssQueries">CSS QUERY second</li>
+        <li class="cssQueries">CSS QUERY third</li>
+        <h2 class="cssQueries">CSS QUERY fourth</h2>
+    </div>
+
+    <!-- attribute -->
+    <h1 id="attribute" class="classDirec">Attribute</h1>
+    <a>Attribute</a>
+
+    <!-- text -->
+    <h1 class="classText">
+
+        <span style="display: none;">Heading</span>
+        <span>Text</span>
+
+        <style>
+            .boxTry {
+                width: 100px;
+                height: 100px;
+            }
+        </style>
+
+        <script>
+            alert('test')
+        </script>
+
+    </h1>
+
+    <!-- innerHTML, outerHTML -->
+    <div class="boxInnerHTML"></div>
+    <div class="boxOuterHTML">
+        <h1>outer HTML</h1>
+    </div>
+
+    <!-- DOM CSS -->
+    <div class="box"></div>
+
+    <!-- classList -->
+    <style>
+        .red {
+            color: red
+        }
+
+        .green {
+            color: green;
+        }
+    </style>
+    <div class="boxClassList boxCl2      boxCl3">
+        <h1>Class List</h1>
+    </div>
+
+    <!-- Dom events -->
+    <!-- 1 định nghĩa attribute -->
+    <p>Dom events 1</p>
+    <h1 onclick="console.log(this)">event Click 1</h1> <!--sự kiện click-->
+    <h1 onmousemove="console.log(Math.random())">event mousemove 1</h1> <!--sự kiện khi di chuột vào element-->
+    <h1 onmouseout="console.log(this.innerText)">event mouseout 1</h1> <!--sự kiện khi di chuột ra element-->
+    <h1 onclick="console.log(this)">
+        <span onclick="console.log(this)">Dom events 1</span>
+    </h1>
+    <!--tuy "dom events" nằm trong thẻ span nhưng do tính chất hosting cho nên khi user click vào thẻ span con sẽ nổi bọt ra ngoài và kích hoạt sự kiện onclick của thẻ h1 cha -->
+
+    <!-- sử dụng element node để gán sự kiện -->
+    <h1 class="eventClick201">event click 2</h1>
+
+    <h2 class="eventClick202">event click 2.1</h2>
+    <h2 class="eventClick202">event click 2.2</h2>
+    <h2 class="eventClick202">event click 2.3</h2>
+
+    <!-- 3.Input / select
+     4. key up / down -->
+    <input type="text">
+    <input type="checkbox">
+
+    <select>
+        <option value="value1">1</option>
+        <option value="value2">2</option>
+        <option value="value3">3</option>
+    </select>
+
+    <input type="text" class="key">
+
+    <!-- 5. preventDefault -->
+    <br />
+    <a class="domEvents" href="https://f8.edu.vn">Học lập trình</a>
+    <br />
+    <a class="domEvents" href="https://google.com.vn">tìm kiếm</a>
+    <br />
+
+    <style>
+        ul {
+            display: none;
+        }
+
+        input:focus~ul {
+            display: block;
+        }
+    </style>
+    <input placeholder="tìm ngôn ngữ lập trình">
+    <ul>
+        <li>JS</li>
+        <li>C</li>
+        <li>C#</li>
+    </ul>
+    <br />
+
+    <!-- 6. stopPropagation -->
+    <div class="divStopPropagation">
+        DIV
+        <button class="buttonStopPropagation">Click me!</button>
+    </div>
+
+    <!-- Event listener -->
+    <button id="btn">listener click</button><br />
+
+</body>
+<script src="./dom.js"></script>
+
+</html>
