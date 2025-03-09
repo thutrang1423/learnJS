@@ -1,0 +1,24 @@
+{
+  "courses": [
+    {
+      "id": "1",
+      "name": "Kiến thức cơ bản, tổng quát cho người mới bắt đầu",
+      "description": "Kiến thức cơ bản dành cho người mới"
+    },
+    {
+      "id": "4638",
+      "name": "Javascript",
+      "description": "lập trình căn bản cho người mới bắt đầu "
+    },
+    {
+      "id": "3730",
+      "name": "Javascript nâng cao",
+      "description": "nâng cấp trình độ lập trình của bạn"
+    },
+    {
+      "id": "fbf1",
+      "name": "test 2",
+      "description": "des 2"
+    }
+  ]
+}
