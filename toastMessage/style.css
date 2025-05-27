@@ -1,0 +1,164 @@
+.btn {}
+
+.toast {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 2px;
+    padding: 20px 0;
+    min-width: 400px;
+    max-width: 450px;
+    border-left: 4px solid;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+    /* animation: slideInLeft ease .3s, fadeOut linear 1s 3s forwards; */
+    transition: all linear .3s;
+    z-index: 99999;
+}
+
+/*
+animation: name duration timing-function delay iteration-count direction fill-mode;
+ name: được định nghĩa trong @keyframes
+ duration: xác định thời gian chạy của animation (2s, 500ms)
+
+ timing-function: điều chỉnh tốc đọ của animation(ease, linear, ease-in, ease-out, ease-in-out)
+ ease: Chuyển động bắt đầu chậm, tăng tốc ở giữa, và chậm lại khi kết thúc (mặc định).
+ linear: Chuyển động diễn ra đều, không có sự thay đổi về tốc độ.
+ ease-in: Bắt đầu chậm, sau đó tăng tốc dần.
+ ease-out: Bắt đầu nhanh, sau đó chậm lại trước khi kết thúc.
+ ease-in-out: Bắt đầu chậm, tăng tốc ở giữa, và chậm lại khi kết thúc (giống ease nhưng mượt hơn).
+
+ delay: độ trễ trước khi animation bắt đầu chạy
+ iteration-count: số lần lặp của animation (1, infinite)
+
+ direction: điều chỉnh hướng của animation(normal, reverse, alternate, alternate-reverse)
+ normal: (mặc định) ➝ Animation chạy từ 0% đến 100% (từ trạng thái đầu đến trạng thái cuối).
+ reverse: Animation chạy ngược lại, từ 100% đến 0% (từ trạng thái cuối về trạng thái đầu).
+ alternate: Animation chạy theo thứ tự 0% → 100% → 0%, đảo chiều sau mỗi lần lặp.
+ alternate-reverse: Giống alternate, nhưng bắt đầu từ 100% → 0% → 100%.
+
+ fill-mode: kiểm soát trạng thái của phần tử trước và sau khi animation kết thúc (none, forwards, backwards, both).
+none: (Mặc định) ➝ Không giữ lại trạng thái của animation, phần tử trở về trạng thái ban đầu sau khi kết thúc.
+forwards: Sau khi animation hoàn thành, phần tử giữ nguyên trạng thái cuối cùng của nó.
+backwards: Khi animation bắt đầu, phần tử áp dụng trạng thái đầu tiên ngay cả khi có animation-delay.
+both: Kết hợp cả forwards và backwards, giữ trạng thái đầu khi có độ trễ và trạng thái cuối khi kết thúc animation.
+
+ play-state: kiểm soát việc animation có chạy hay tạm dừng(running, paused)
+*/
+
+/*
+  transition: [thuộc tính] [thời gian] [tốc độ] [độ trễ];
+    thuộc tính: Xác định thuộc tính nào sẽ có hiệu ứng chuyển đổi (all, background-color, transform, v.v.).
+    thời gian: Thời gian chuyển đổi (ví dụ: 0.5s, 300ms).
+    tốc độ: Kiểu chuyển động (linear, ease, ease-in, ease-out, ease-in-out).
+    độ trễ: Thời gian chờ trước khi hiệu ứng bắt đầu (0s, 1s, v.v.).
+*/
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(calc(100% + 32px));
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+.toast--success {
+    border-color: #47d864;
+}
+
+.toast--success .toast__icon {
+    color: #47d864;
+}
+
+.toast--info {
+    border-color: #2f86eb;
+}
+
+.toast--info .toast__icon {
+    color: #2f86eb;
+}
+
+.toast--danger {
+    border-color: #ffc021;
+}
+
+.toast--danger .toast__icon {
+    color: #ffc021;
+}
+
+
+.toast+.toast {
+    margin-top: 24px;
+}
+
+.toast__icon {
+    font-size: 24px;
+}
+
+.toast__icon,
+.toast__close {
+    padding: 0 16px;
+}
+
+.toast__body {
+    flex-grow: 1;
+}
+
+.toast__title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.toast__msg {
+    font-size: 16px;
+    color: #888;
+    margin-top: 6px;
+    line-height: 1.5;
+}
+
+.toast__close {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.3)
+}
+
+#toast {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+}
+
+.cover_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 20px
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.btn--success {
+    background-color: #47d864;
+}
+
+.btn--info {
+    background-color: #2f86eb;
+}
+
+.btn--danger {
+    background-color: #ffc021;
+}

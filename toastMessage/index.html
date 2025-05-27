@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div id="toast">
+        <!-- <div class="toast toast--success">
+            <div class="toast__icon">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <div class="toast__body">
+                <h3 class="toast__title">Success</h3>
+                <p class="toast__msg">Truy cập thành công</p>
+            </div>
+            <div class="toast__close">
+                <i class="fa-solid fa-xmark"></i>
+            </div> 
+        </div> -->
+    </div>
+
+    <div class="cover_btn">
+        <div class="btn btn--success" onclick="showSuccessToast();">Show success toast</div>
+        <div class="btn btn--info" onclick="showInfoToast();">Show info toast</div>
+        <div class="btn btn--danger" onclick="showDangerToast();">Show error toast</div>
+    </div>
+
+    <script src="./toast.js"></script>
+    <script>
+        // function toast({
+        //     title = '',
+        //     message = '',
+        //     type = 'info',
+        //     duration = 3000
+        // }) {
+        //     const main = document.getElementById('toast');
+        //     if (main) {
+        //         const toast = document.createElement('div');
+
+        //         //auto remove toast
+        //         const autoRemoveId = setTimeout(function () {
+        //             main.removeChild(toast);
+        //         }, duration + 1000);
+
+        //         //remove toast when clicked
+        //         toast.onclick = function (e) {
+        //             // console.log(e.target); //e.target: sẽ trả về phần tử HTML cụ thể mà sự kiện đang tác động đến
+        //             if (e.target.closest('.toast__close')) { //closest: sử dụng để tìm phần tử tổ tiên gần nhất (hoặc chính nó) phù hợp với bộ chọn CSS đã cho. hữu ích khi muốn tìm một phần tử cha có một lớp hoặc thẻ cụ thể.
+        //                 main.removeChild(toast);
+        //                 clearTimeout(autoRemoveId); //sử dụng để hủy bỏ một bộ hẹn giờ (setTimeout()) trước khi nó được thực thi
+        //             }
+        //         }
+
+        //         const icons = {
+        //             success: 'fa-solid fa-check',
+        //             info: 'fa-solid fa-exclamation',
+        //             danger: 'fa-solid fa-triangle-exclamation'
+        //         }
+        //         const icon = icons[type];
+        //         const delay = (duration / 1000).toFixed(2); //toFixed(2): 2 chữ số thập phân mong muốn.
+
+        //         toast.classList.add('toast', `toast--${type}`);
+        //         toast.style.animation = `slideInLeft ease .3s, fadeOut linear 1s 3s forwards`
+        //         toast.innerHTML = `
+        //             <div class="toast__icon">
+        //                 <i class="${icon}"></i>
+        //             </div>
+        //             <div class="toast__body">
+        //                 <h3 class="toast__title">${title}</h3>
+        //                 <p class="toast__msg">${message}</p>
+        //             </div>
+        //             <div class="toast__close">
+        //                 <i class="fa-solid fa-xmark"></i>
+        //             </div>
+        //         `;
+        //         main.appendChild(toast); // appendChild: sử dụng để thêm một phần tử con vào phần tử cha trong DOM
+        //     }
+        // }
+
+        function showSuccessToast() {
+            toast({
+                title: 'Success',
+                message: 'Ket noi thanh cong',
+                type: 'success',
+                duration: 3000
+            })
+        }
+        function showInfoToast() {
+            toast({
+                title: 'info',
+                message: 'Ket noi thanh cong nhung khong co internet',
+                type: 'info',
+                duration: 3000
+            })
+        }
+        function showDangerToast() {
+            toast({
+                title: 'danger',
+                message: 'ket noi that bai',
+                type: 'danger',
+                duration: 3000
+            })
+        }
+    </script>
+</body>
+
+</html>
